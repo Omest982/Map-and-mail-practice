@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Map and mail practice</title>
+  </head>
+  <body>
+    <div class="map">
+      <div class="map__body">
+        <div class="map__text">
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error
+            libero molestias temporibus doloribus at inventore iure eligendi
+            sequi magnam quia.
+          </p>
+        </div>
+        <div class="map__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10150.618000094273!2d30.41558965897727!3d50.50338774832958!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cd6ec5a66665%3A0x7eb8d3c45222c2d5!2sRetroville!5e0!3m2!1sru!2sua!4v1663232991406!5m2!1sru!2sua"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="mail">
+      <form action="" class="form" id="form" novalidate>
+        <h1 class="form__title">Отпрака данных на почту</h1>
+        <div class="form__item">
+          <label for="name" class="form__label">Имя*:</label>
+          <input type="text" class="form__input _req" id="name" name="name" />
+        </div>
+        <div class="form__item">
+          <label for="email" class="form__label">E-mail*:</label>
+          <input
+            type="email"
+            class="form__input _req _email"
+            id="email"
+            name="email"
+          />
+        </div>
+        <div class="form__item">
+          <label for="" class="form__label">Левша или праша?</label>
+          <div class="option">
+            <input
+              type="radio"
+              class="option__input"
+              id="forRight"
+              name="hand"
+              value="right"
+              checked
+            />
+            <label for="forRight" class="option__label"
+              ><span>Правша</span></label
+            >
+          </div>
+          <div class="option">
+            <input
+              type="radio"
+              class="option__input"
+              id="forLeft"
+              name="hand"
+              value="left"
+            />
+            <label for="forLeft" class="option__label"
+              ><span>Левша</span></label
+            >
+          </div>
+        </div>
+        <div class="form__item">
+          <label class="form__label" for="massage">Сообщение:</label>
+          <textarea
+            name="message"
+            id="massage"
+            cols="30"
+            rows="10"
+            class="form__input"
+          ></textarea>
+        </div>
+        <div class="form__item">
+          <label for="age" class="form__label">Возраст:</label>
+          <select name="age" id="age" class="form__input">
+            <option value="от 18 до 25">Молодой</option>
+            <option value="от 25 до 40">Взрослый</option>
+            <option value="от 40">Пожилой</option>
+          </select>
+        </div>
+        <div class="form__item">
+          <label for="" class="form__label">Прикрепить фото:</label>
+          <div class="file">
+            <div class="file__button">
+              <input
+                type="file"
+                accept=".jpg, .png, .gif"
+                class="file__input"
+                name="image"
+                id="formImage"
+              />
+              <div>Выбрать</div>
+            </div>
+            <div class="file__preview" id="formPreview"></div>
+          </div>
+        </div>
+        <div class="form__item">
+          <div class="checkbox">
+            <input
+              id="agreement"
+              type="checkbox"
+              class="checkbox__input _req"
+            />
+            <label for="agreement" class="checkbox__label"
+              ><span
+                >Я даю свое согласие на обработку персональных данных в
+                соответсвии с <a href="">Условиями</a>*</span
+              >
+            </label>
+          </div>
+        </div>
+        <div class="form__btn">
+          <button type="submit">Отправить</button>
+        </div>
+      </form>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
